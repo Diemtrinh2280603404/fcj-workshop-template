@@ -29,6 +29,10 @@ chapter: false
   <img src="/images/avatar.png" alt="Ảnh đại diện của bạn" style="width:450px;">
 </div>
 
+<div style="display:flex; justify-content:center;">
+  <img src="/images/avatar2.jpg" alt="Ảnh đại diện của bạn 2" style="width:450px;">
+</div>
+
 
 
 ### Nội dung báo cáo

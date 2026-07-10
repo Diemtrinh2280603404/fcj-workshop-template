@@ -33,6 +33,10 @@ chapter: false
   <img src="/images/avatar.png" alt="Your profile picture" style="width:450px;">
 </div>
 
+<div style="display:flex; justify-content:center;">
+  <img src="/images/avatar2.jpg" alt="Your profile picture 2" style="width:450px;">
+</div>
+
 ### Report Content
 
 1.  [Worklog](1-Worklog/)

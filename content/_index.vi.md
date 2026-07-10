@@ -26,11 +26,7 @@ chapter: false
 &emsp; **Thời gian thực tập:** Từ ngày 17/04/2025 đến ngày 10/08/2025
 
 <div style="display:flex; justify-content:center;">
-  <img src="/images/avatar.png" alt="Ảnh đại diện của bạn" style="width:450px;">
-</div>
-
-<div style="display:flex; justify-content:center;">
-  <img src="/images/avatar2.jpg" alt="Ảnh đại diện của bạn 2" style="width:450px;">
+  <img src="/images/avatar2.jpg" alt="Ảnh đại diện của bạn" style="width:450px;">
 </div>
 
 

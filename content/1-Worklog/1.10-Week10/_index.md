@@ -5,53 +5,44 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Optimize FlashLearn system performance through caching, automated image processing and comprehensive API testing.
+* Develop a smart learning recommendation feature based on user history.
+* Set up a monitoring and performance tracking system for the application on AWS.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Team meeting to plan performance optimization:<br>&nbsp;&nbsp;+ Optimize RDS PostgreSQL queries (add Indexes)<br>&nbsp;&nbsp;+ Configure CloudFront caching with appropriate TTL | 06/21/2026 | 06/22/2026 | |
+| 3   | - Hands-on automated image processing with Lambda:<br>&nbsp;&nbsp;+ Lambda auto-triggers on S3 image upload<br>&nbsp;&nbsp;+ Resize images to standard sizes (thumbnail, medium, large)<br>&nbsp;&nbsp;+ Compress to WebP format to reduce storage | 06/22/2026 | 06/23/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 4   | - Comprehensive API testing with Postman:<br>&nbsp;&nbsp;+ Test all CRUD methods via API Gateway<br>&nbsp;&nbsp;+ Verify CORS configuration for frontend<br>&nbsp;&nbsp;+ Validate IAM Authorization | 06/23/2026 | 06/24/2026 | |
+| 5   | - Team meeting to develop smart learning recommendation:<br>&nbsp;&nbsp;+ Algorithm based on study history (frequency, correct/incorrect ratio)<br>&nbsp;&nbsp;+ Data flow: Lambda reads Progress table → compute → return prioritized list | 06/24/2026 | 06/26/2026 | |
+| 6   | - Set up monitoring system on AWS:<br>&nbsp;&nbsp;+ CloudWatch Dashboard: CPU, Memory, Network of EC2 (ARM64)<br>&nbsp;&nbsp;+ CloudWatch Alarms when RDS CPU > 80%<br>&nbsp;&nbsp;+ AWS X-Ray to trace internal API calls and identify bottlenecks | 06/26/2026 | 06/28/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully optimized RDS PostgreSQL query performance and CloudFront caching:
+  * Added indexes on frequently queried columns (user_id, deck_id, created_at)
+  * Configured CloudFront Cache Policy with appropriate TTL for each type of static content
+  * Reduced average response time for complex queries
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully deployed an automated image processing pipeline with Lambda:
+  * Lambda auto-triggers when images are uploaded to S3
+  * Resizes images to standard dimensions (thumbnail, medium, large) and compresses to WebP format
+  * Stores image versions in separate S3 prefixes, significantly reducing storage consumption
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Completed comprehensive API testing with Postman:
+  * Verified all CRUD methods (GET, POST, PUT, DELETE) via API Gateway
+  * Confirmed CORS configuration works correctly for the frontend
+  * Validated IAM authorization ensuring only permitted roles can invoke APIs
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Developed and finalized the smart learning recommendation feature:
+  * Built a recommendation algorithm based on learning history (review frequency, correct/incorrect ratio, study time)
+  * Designed data flow: Lambda reads Progress table → computes → returns prioritized vocabulary list
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Established a comprehensive monitoring system on AWS:
+  * CloudWatch Dashboard tracking CPU, Memory and Network of EC2 (ARM64)
+  * CloudWatch Alarms triggered when RDS CPU > 80% or connections exceed threshold
+  * AWS X-Ray tracing internal API calls to identify bottlenecks in the processing flow

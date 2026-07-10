@@ -5,53 +5,45 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Focus on in-depth research into automated security tools to optimize monitoring capabilities and response to potential risks.
+* Strengthen skills in configuring granular permissions in IAM, including distinguishing between roles and users to apply the principle of least privilege in cloud environments.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Study AWS security fundamentals:<br>&nbsp;&nbsp;+ Shared Responsibility Model<br>&nbsp;&nbsp;+ Importance of data protection in the cloud | 05/24/2026 | 05/25/2026 | [AWS: Shared Responsibility Model](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/shared-responsibility.html) |
+| 3   | - Research compliance governance on AWS:<br>&nbsp;&nbsp;+ International regulatory standards<br>&nbsp;&nbsp;+ 5 core functions: Identify, Protect, Detect, Respond, Recover | 05/25/2026 | 05/27/2026 | [AWS: Cloud Compliance Program](https://aws.amazon.com/vi/compliance/) |
+| 4   | - Evaluate automated security tools:<br>&nbsp;&nbsp;+ Security Hub<br>&nbsp;&nbsp;+ Trusted Advisor<br>&nbsp;&nbsp;+ Amazon GuardDuty | 05/27/2026 | 05/28/2026 | [AWS: Intelligent Threat Detection – Amazon GuardDuty](https://aws.amazon.com/vi/guardduty/) |
+| 5   | - Identity and Access Management (IAM):<br>&nbsp;&nbsp;+ Principle of least privilege<br>&nbsp;&nbsp;+ Root account security and MFA<br>&nbsp;&nbsp;+ Secrets management with Secrets Manager | 05/28/2026 | 05/29/2026 | [AWS: Identity and Access Management (IAM)](https://docs.amazonaws.cn/iam/) |
+| 6   | - Deep dive into IAM:<br>&nbsp;&nbsp;+ Distinguish IAM User and IAM Role<br>&nbsp;&nbsp;+ Configure access policies (Policy)<br>&nbsp;&nbsp;+ Attach permissions to EC2/Lambda resources | 05/29/2026 | 05/31/2026 | [AWS Builder Documentation](https://builder.aws.com/content/3C3mJwaTB5NWzcBfEugE7AUx59H/iam-identity-and-access-management) |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered the AWS Shared Responsibility Model:
+  * AWS is responsible for securing physical infrastructure, hypervisors and platform services
+  * Customers are responsible for securing data, applications, OS configuration and access control
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood the compliance governance framework and 5 core functions:
+  * Identify – recognize assets and risks
+  * Protect – implement security controls
+  * Detect – continuously monitor for anomalies
+  * Respond – handle incidents promptly
+  * Recover – restore systems after incidents
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Proficiently evaluated and used automated security tools:
+  * Security Hub – consolidates and prioritizes security findings from multiple services
+  * Trusted Advisor – checks configuration against best practices (security, cost, performance)
+  * GuardDuty – intelligent threat detection using ML, analyzing CloudTrail, VPC Flow Logs and DNS logs
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Configured IAM correctly following the principle of least privilege:
+  * Root account security: enabled MFA, avoided using root for daily tasks
+  * Created IAM Users with limited permissions scoped to specific functions
+  * Managed secrets using AWS Secrets Manager and Parameter Store
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Clearly distinguished IAM User vs IAM Role and configured granular access policies:
+  * IAM User – fixed identity for people or applications
+  * IAM Role – temporary identity attached to EC2/Lambda/AWS services to access resources
+  * Inline Policy vs Managed Policy – scope of application and reusability

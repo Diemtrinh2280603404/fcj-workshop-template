@@ -5,55 +5,44 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kiến trúc EC2, cơ chế cân bằng tải và chiến lược mở rộng tài nguyên tự động.
+* Hiểu rõ các mô hình dịch vụ lưu trữ dữ liệu hiện đại và giải pháp di chuyển cơ sở dữ liệu lên AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --------- | ------------ | --------------- | ------------------- |
+| 2   | - Nghiên cứu kiến trúc EC2:<br>&nbsp;&nbsp;+ Phân loại Instance theo workload<br>&nbsp;&nbsp;+ Thành phần: AMI, VPC, Security Group, EBS<br>&nbsp;&nbsp;+ Cơ chế truy cập: SSH, EC2 Connect, Session Manager | 03/05/2026 | 06/05/2026 | [Amazon EC2 Documentation](https://docs.aws.amazon.com/ec2/) |
+| 3   | - Tìm hiểu cân bằng tải (ELB) và tự động mở rộng (Auto Scaling):<br>&nbsp;&nbsp;+ Application Load Balancer (ALB)<br>&nbsp;&nbsp;+ Auto Scaling Group và Scaling Policy | 06/05/2026 | 08/05/2026 | [Elastic Load Balancing](https://aws.amazon.com/vi/elasticloadbalancing/) / [Auto Scaling](https://aws.amazon.com/vi/autoscaling/) |
+| 4   | - Khám phá Container và Serverless trên AWS:<br>&nbsp;&nbsp;+ Container: ECS, EKS<br>&nbsp;&nbsp;+ Serverless: AWS Lambda, Fargate | 08/05/2026 | 09/05/2026 | [Amazon ECS](https://aws.amazon.com/ecs/) / [AWS Lambda](https://aws.amazon.com/lambda/) |
+| 5   | - Tìm hiểu các loại cơ sở dữ liệu AWS:<br>&nbsp;&nbsp;+ SQL: RDS (MySQL, PostgreSQL), Aurora<br>&nbsp;&nbsp;+ NoSQL: DynamoDB<br>&nbsp;&nbsp;+ In-memory: MemoryDB | 09/05/2026 | 10/05/2026 | [Amazon RDS](https://aws.amazon.com/rds/) / [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) |
+| 6   | - Chiến lược di chuyển dữ liệu (6R):<br>&nbsp;&nbsp;+ Công cụ: DMS, SCT, Snow Family, DataSync<br>&nbsp;&nbsp;+ Lựa chọn giải pháp phù hợp theo từng kịch bản | 10/05/2026 | 10/05/2026 | [AWS Database Migration Service](https://aws.amazon.com/dms/) / [AWS Snow Family](https://aws.amazon.com/snowball/) |
 
-### Kết quả đạt được tuần 3:
+### Thành tích tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Phân loại chi tiết kiến trúc EC2 theo workload và nắm rõ các thành phần thiết lập:
+  * AMI, VPC, Security Group, EBS
+  * Các phương thức truy cập từ xa: SSH Key Pair, EC2 Instance Connect, Session Manager
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm được nguyên lý cân bằng tải và tự động mở rộng tài nguyên:
+  * Application Load Balancer (ALB) – định tuyến theo path/host
+  * Scaling Policy: Target Tracking, Step Scaling, Scheduled Scaling
+  * Kết hợp ELB với Auto Scaling Group để đảm bảo tính sẵn sàng cao
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phân biệt rõ các mô hình Container và Serverless trên AWS:
+  * ECS (EC2 launch type) vs EKS (Kubernetes)
+  * Fargate – serverless container, không quản lý máy chủ
+  * AWS Lambda – event-driven, tính phí theo số lần gọi và thời gian thực thi
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phân loại và lựa chọn đúng dịch vụ cơ sở dữ liệu theo yêu cầu:
+  * SQL: RDS (MySQL, PostgreSQL), Aurora (hiệu năng cao)
+  * NoSQL: DynamoDB (key-value, document, độ trễ thấp)
+  * In-memory: MemoryDB (Redis-compatible, bền vững)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm được 6 chiến lược di chuyển (6R) và vai trò của từng công cụ:
+  * AWS DMS – di chuyển database trực tuyến (online migration)
+  * AWS SCT – chuyển đổi schema tự động giữa các engine khác nhau
+  * Snow Family – di chuyển dữ liệu offline quy mô lớn (TB đến PB)
+  * DataSync – đồng bộ file storage liên tục và tự động

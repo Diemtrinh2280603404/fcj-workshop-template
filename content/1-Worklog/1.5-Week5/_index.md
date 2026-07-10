@@ -5,53 +5,49 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master diverse AWS storage solutions and data lifecycle management workflows.
+* Proficiently apply AI/ML services, data analytics tools, and system integration in hands-on practice exercises.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Study AWS storage options:<br>&nbsp;&nbsp;+ Object Storage: S3<br>&nbsp;&nbsp;+ Block Storage: EBS<br>&nbsp;&nbsp;+ File Storage: EFS<br>&nbsp;&nbsp;+ In-memory: ElastiCache<br>- Study data lifecycle and backup management workflows | 05/17/2026 | 05/20/2026 | [S3 Documentation](https://docs.aws.amazon.com/s3/) / [EBS Documentation](https://docs.aws.amazon.com/ebs/) / [EFS Documentation](https://docs.aws.amazon.com/efs/) |
+| 3   | - Explore the AWS AI/ML ecosystem:<br>&nbsp;&nbsp;+ Built-in AI services<br>&nbsp;&nbsp;+ Machine Learning with SageMaker<br>&nbsp;&nbsp;+ Code assistance with CodeWhisperer<br>- Research the standard ML deployment workflow on AWS | 05/20/2026 | 05/22/2026 | [SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/) / [AWS AI Services](https://aws.amazon.com/ai/services/) |
+| 4   | - Discover data analytics services:<br>&nbsp;&nbsp;+ Serverless query: Athena<br>&nbsp;&nbsp;+ Stream processing: Kinesis<br>&nbsp;&nbsp;+ ETL: Glue<br>&nbsp;&nbsp;+ Data warehousing: Redshift<br>&nbsp;&nbsp;+ Visualization: QuickSight | 05/22/2026 | 05/23/2026 | [Athena Documentation](https://docs.aws.amazon.com/athena/) / [Kinesis Documentation](https://docs.aws.amazon.com/kinesis/) / [Redshift Documentation](https://docs.aws.amazon.com/redshift/) |
+| 5   | - Study application integration services:<br>&nbsp;&nbsp;+ EventBridge: event routing<br>&nbsp;&nbsp;+ SQS: message queue<br>&nbsp;&nbsp;+ SNS: pub/sub notification<br>- Explore Connect, SES and DevOps tools | 05/23/2026 | 05/24/2026 | [EventBridge Documentation](https://docs.aws.amazon.com/eventbridge/) / [SQS Documentation](https://docs.aws.amazon.com/sqs/) / [SNS Documentation](https://docs.aws.amazon.com/sns/) |
+| 6   | - Comprehensive hands-on practice:<br>&nbsp;&nbsp;+ Configure S3 Lifecycle Policy<br>&nbsp;&nbsp;+ Build ML model with SageMaker<br>&nbsp;&nbsp;+ Build data pipeline: Kinesis → Glue → Redshift<br>&nbsp;&nbsp;+ Deploy event-driven system with EventBridge | 05/24/2026 | 05/24/2026 | [AWS Hands-on Guide](https://aws.amazon.com/vi/getting-started/hands-on/) |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Clearly distinguished the four AWS storage types and their appropriate use cases:
+  * Object Storage (S3) – static file storage, backup, data lake
+  * Block Storage (EBS) – disk directly attached to EC2, suitable for databases
+  * File Storage (EFS) – shared file system across multiple instances simultaneously
+  * In-memory (ElastiCache) – data caching, reducing query latency
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully configured S3 Lifecycle Policy to automatically transition data between storage classes (Standard → IA → Glacier) and set up scheduled backups.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Understood the AWS AI/ML ecosystem and the standard ML deployment workflow:
+  * SageMaker – build, train and deploy ML models
+  * CodeWhisperer – AI-powered code assistance within the IDE
+  * Workflow: data preparation → training → evaluation → endpoint deployment
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Successfully completed hands-on ML model creation with SageMaker:
+  * Prepared dataset and uploaded to S3
+  * Launched a training job and monitored progress
+  * Deployed the model to an endpoint and performed inference
 
-* Used AWS CLI to perform basic operations such as:
+* Mastered data analytics services and the role of each:
+  * Athena – serverless SQL queries directly on S3 (pay per data scanned)
+  * Kinesis – real-time data stream processing
+  * Glue – serverless ETL for data preparation and transformation
+  * Redshift – large-scale data warehouse for analytics
+  * QuickSight – data visualization and dashboard reporting
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully built a data pipeline connecting Kinesis → Glue → Redshift and deployed an event-driven system using EventBridge:
+  * SQS – message queue ensuring sequential processing and no data loss
+  * SNS – pub/sub notifications delivered to multiple subscribers
+  * EventBridge – automatic event routing between AWS services

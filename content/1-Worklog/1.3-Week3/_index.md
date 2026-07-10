@@ -5,53 +5,44 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master EC2 architecture, load balancing mechanisms and automatic resource scaling strategies.
+* Gain a clear understanding of modern data storage service models and database migration solutions to AWS.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Study EC2 architecture:<br>&nbsp;&nbsp;+ Classify Instance types by workload<br>&nbsp;&nbsp;+ Components: AMI, VPC, Security Group, EBS<br>&nbsp;&nbsp;+ Remote access: SSH, EC2 Connect, Session Manager | 05/03/2026 | 05/06/2026 | [Amazon EC2 Documentation](https://docs.aws.amazon.com/ec2/) |
+| 3   | - Explore Elastic Load Balancing (ELB) and Auto Scaling:<br>&nbsp;&nbsp;+ Application Load Balancer (ALB)<br>&nbsp;&nbsp;+ Auto Scaling Group and Scaling Policy | 05/06/2026 | 05/08/2026 | [Elastic Load Balancing](https://aws.amazon.com/vi/elasticloadbalancing/) / [Auto Scaling](https://aws.amazon.com/vi/autoscaling/) |
+| 4   | - Discover Container and Serverless on AWS:<br>&nbsp;&nbsp;+ Container: ECS, EKS<br>&nbsp;&nbsp;+ Serverless: AWS Lambda, Fargate | 05/08/2026 | 05/09/2026 | [Amazon ECS](https://aws.amazon.com/ecs/) / [AWS Lambda](https://aws.amazon.com/lambda/) |
+| 5   | - Explore AWS database catalog:<br>&nbsp;&nbsp;+ SQL: RDS (MySQL, PostgreSQL), Aurora<br>&nbsp;&nbsp;+ NoSQL: DynamoDB<br>&nbsp;&nbsp;+ In-memory: MemoryDB | 05/09/2026 | 05/10/2026 | [Amazon RDS](https://aws.amazon.com/rds/) / [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) |
+| 6   | - Data migration strategy (6Rs):<br>&nbsp;&nbsp;+ Tools: DMS, SCT, Snow Family, DataSync<br>&nbsp;&nbsp;+ Select the appropriate solution per scenario | 05/10/2026 | 05/10/2026 | [AWS Database Migration Service](https://aws.amazon.com/dms/) / [AWS Snow Family](https://aws.amazon.com/snowball/) |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Classified EC2 architecture in detail by workload and understood all key setup components:
+  * AMI, VPC, Security Group, EBS
+  * Remote access methods: SSH Key Pair, EC2 Instance Connect, Session Manager
 
-* Successfully created and configured an AWS Free Tier account.
+* Understood load balancing and automatic resource scaling mechanisms:
+  * Application Load Balancer (ALB) – path/host-based routing
+  * Scaling Policies: Target Tracking, Step Scaling, Scheduled Scaling
+  * Combined ELB with Auto Scaling Group to ensure high availability
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Clearly distinguished Container and Serverless models on AWS:
+  * ECS (EC2 launch type) vs EKS (Kubernetes)
+  * Fargate – serverless containers, no server management required
+  * AWS Lambda – event-driven, billed per invocation and execution duration
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Correctly classified and selected database services based on requirements:
+  * SQL: RDS (MySQL, PostgreSQL), Aurora (high performance)
+  * NoSQL: DynamoDB (key-value, document, low latency)
+  * In-memory: MemoryDB (Redis-compatible, durable)
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered the 6 migration strategies (6Rs) and the role of each tool:
+  * AWS DMS – online database migration
+  * AWS SCT – automatic schema conversion between different engines
+  * Snow Family – offline large-scale data migration (TB to PB)
+  * DataSync – continuous and automated file storage synchronization

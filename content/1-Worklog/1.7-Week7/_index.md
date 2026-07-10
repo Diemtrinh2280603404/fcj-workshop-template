@@ -5,53 +5,44 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Review and consolidate all foundational knowledge learned about cloud computing, storage services, networking and security on AWS.
+* Complete comprehensive hands-on assessments and practice exams to be fully prepared for the final examination.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 2   | - Review cloud computing fundamentals:<br>&nbsp;&nbsp;+ Deployment models: Public, Private, Hybrid Cloud<br>&nbsp;&nbsp;+ Service models: IaaS, PaaS, SaaS<br>&nbsp;&nbsp;+ AWS service catalog by functional group<br>- Complete hands-on assessment | 05/31/2026 | 06/01/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 3   | - Consolidate EC2 and storage knowledge:<br>&nbsp;&nbsp;+ Instance types and Compute services<br>&nbsp;&nbsp;+ S3, EBS, EFS, ElastiCache<br>- Complete Compute & Storage assessment | 06/01/2026 | 06/02/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 4   | - Review networking and database topics:<br>&nbsp;&nbsp;+ VPC, Subnet, Route Table, Security Group, NACL<br>&nbsp;&nbsp;+ RDS, Aurora, DynamoDB, ElastiCache<br>- Complete Networking & Database assessment | 06/02/2026 | 06/04/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 5   | - Review operational tools and security:<br>&nbsp;&nbsp;+ AWS CLI and Management Console<br>&nbsp;&nbsp;+ IAM: Least privilege, MFA, root protection<br>&nbsp;&nbsp;+ Secrets Manager, GuardDuty, Security Hub<br>- Complete comprehensive assessment | 06/04/2026 | 06/05/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 6   | - Final wrap-up and exam preparation:<br>&nbsp;&nbsp;+ Complete full mock exam<br>&nbsp;&nbsp;+ Identify weak areas and focus revision<br>&nbsp;&nbsp;+ Familiarize with question formats and time management | 06/05/2026 | 06/07/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Thoroughly reviewed and reinforced foundational cloud computing knowledge:
+  * Three deployment models: Public, Private, Hybrid Cloud
+  * Three service layers: IaaS, PaaS, SaaS
+  * Complete AWS service catalog organized by functional group
 
-* Successfully created and configured an AWS Free Tier account.
+* Solidified proficiency in EC2 and storage knowledge:
+  * Instance type classification and correct selection by workload
+  * Storage solutions: S3 (object), EBS (block), EFS (file), ElastiCache (in-memory)
+  * Successfully completed hands-on Compute and Storage assessments with good results
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Mastered AWS networking and database knowledge:
+  * VPC, Subnet, Route Table, Security Group, NACL
+  * Connectivity services: PrivateLink, VPN, Direct Connect
+  * Distinguished RDS, Aurora, DynamoDB, ElastiCache by use case
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Strengthened proficiency in AWS operational tools:
+  * Mastered AWS CLI and AWS Management Console
+  * Configured IAM following the principle of least privilege
+  * Set up account security: MFA, root account protection, Secrets Manager
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed the final mock exam and achieved readiness for the final test:
+  * Identified weak knowledge areas and conducted focused revision
+  * Familiarized with question formats and time management strategies for the exam

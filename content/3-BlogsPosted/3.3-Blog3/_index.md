@@ -1,31 +1,36 @@
 ---
 title: "Blog 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# BUILDING A DATA LAKE WITH AMAZON S3 AND AMAZON ATHENA
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+A Data Lake is a centralized storage architecture that can hold raw data in any format — structured, semi-structured or unstructured — until it is needed. On AWS, this architecture can be effectively implemented with Amazon S3 as the storage layer, AWS Glue to manage Metadata, and Amazon Athena to query data using SQL without managing any infrastructure.
 
-Key points to know:
+<div style="display:flex; justify-content:center;">
+  <img src="/images/blogs/blog3.png" alt="Blog 3" style="width:80%; margin:8px 0;">
+</div>
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key points to know
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- Amazon S3 is the foundation of the Data Lake: S3 provides low-cost, highly durable and nearly unlimited scalable storage, suitable for holding raw data from various sources such as applications, IoT devices, system logs or streaming data.
+- AWS Glue manages Metadata through the Data Catalog: Glue Crawlers automatically scan data in S3, detect schemas and register the information into the Glue Data Catalog, allowing services like Athena to understand and query data accurately.
+- Amazon Athena enables direct SQL queries on S3: Athena is a Serverless query service that uses the Presto Engine to execute SQL statements on data stored in S3 without loading data into a separate database, charging only for the amount of data scanned.
+- Data partitioning optimizes performance and cost: Organizing data with a partition structure (e.g., by year, month, day) in S3 allows Athena to scan only the necessary data, significantly reducing query time and cost.
+- Optimized data formats improve query speed: Using columnar storage formats such as Parquet or ORC instead of CSV or JSON significantly improves read performance and reduces the amount of data scanned during queries.
+- Fully Serverless architecture with flexible integration: The entire pipeline from collection, storage to querying requires no server management, and easily integrates with Amazon QuickSight for data visualization or Amazon SageMaker for Machine Learning workloads.
 
-...Image...
+The Data Lake architecture on AWS with S3, Glue and Athena is particularly well-suited for organizations that need to build a data analytics platform with optimized costs, high scalability and no desire to invest in complex infrastructure. It also serves as an ideal foundation for developing advanced analytics applications, Business Intelligence or Machine Learning models in the future.
 
-...Link...
+[View post on AWS Study Group](https://web.facebook.com/share/p/1Bn86KFzSx/)
 
-...Guide...
+---
+
+### References
+
+- [Amazon Athena – AWS Documentation](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
+- [AWS Glue – AWS Documentation](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
+- [Data Lakes and Analytics on AWS](https://aws.amazon.com/big-data/datalakes-and-analytics/)

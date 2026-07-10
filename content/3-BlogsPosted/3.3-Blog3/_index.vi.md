@@ -1,31 +1,36 @@
 ---
 title: "Blog 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# XÂY DỰNG DATA LAKE VỚI AMAZON S3 VÀ AMAZON ATHENA
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Data Lake là một kiến trúc lưu trữ tập trung cho phép chứa dữ liệu thô ở mọi định dạng – có cấu trúc, bán cấu trúc hoặc phi cấu trúc – cho đến khi cần sử dụng. Trên AWS, kiến trúc này có thể được triển khai hiệu quả với Amazon S3 làm tầng lưu trữ, AWS Glue để quản lý Metadata và Amazon Athena để truy vấn dữ liệu bằng SQL mà không cần quản lý bất kỳ hạ tầng nào.
 
-Các điểm chính cần nắm:
+<div style="display:flex; justify-content:center;">
+  <img src="/images/blogs/blog3.png" alt="Blog 3" style="width:80%; margin:8px 0;">
+</div>
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+### Những điểm chính cần biết
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+- Amazon S3 là nền tảng lưu trữ của Data Lake: S3 cung cấp khả năng lưu trữ với chi phí thấp, độ bền cao và khả năng mở rộng gần như không giới hạn, phù hợp để chứa dữ liệu thô từ nhiều nguồn khác nhau như ứng dụng, thiết bị IoT, log hệ thống hoặc dữ liệu streaming.
+- AWS Glue quản lý Metadata thông qua Data Catalog: Glue Crawler tự động quét dữ liệu trong S3, nhận diện Schema và đăng ký thông tin vào Glue Data Catalog, giúp các dịch vụ như Athena có thể hiểu và truy vấn dữ liệu một cách chính xác.
+- Amazon Athena cho phép truy vấn SQL trực tiếp trên S3: Athena là dịch vụ truy vấn Serverless, sử dụng Presto Engine để thực thi câu lệnh SQL trên dữ liệu lưu trữ trong S3 mà không cần tải dữ liệu vào cơ sở dữ liệu riêng biệt, chỉ tính phí theo lượng dữ liệu được quét.
+- Phân vùng dữ liệu giúp tối ưu hiệu suất và chi phí: Tổ chức dữ liệu theo cấu trúc phân vùng (ví dụ: theo năm, tháng, ngày) trong S3 giúp Athena chỉ quét đúng phần dữ liệu cần thiết, từ đó giảm thời gian truy vấn và chi phí đáng kể.
+- Định dạng dữ liệu tối ưu hóa tốc độ truy vấn: Sử dụng các định dạng lưu trữ dạng cột như Parquet hoặc ORC thay vì CSV hoặc JSON giúp cải thiện đáng kể hiệu suất đọc và giảm lượng dữ liệu cần quét khi truy vấn.
+- Kiến trúc hoàn toàn Serverless và tích hợp linh hoạt: Toàn bộ luồng xử lý từ thu thập, lưu trữ đến truy vấn đều không cần quản lý máy chủ, đồng thời dễ dàng tích hợp với Amazon QuickSight để trực quan hóa dữ liệu hoặc Amazon SageMaker cho các bài toán Machine Learning.
 
-...Hình ảnh...
+Kiến trúc Data Lake trên AWS với S3, Glue và Athena đặc biệt phù hợp với các tổ chức cần xây dựng nền tảng phân tích dữ liệu với chi phí tối ưu, khả năng mở rộng cao và không muốn đầu tư vào hạ tầng phức tạp. Đây cũng là nền tảng lý tưởng để phát triển các ứng dụng phân tích nâng cao, Business Intelligence hoặc các mô hình Machine Learning trong tương lai.
 
-...Link...
+[Xem bài đăng trên AWS Study Group](https://web.facebook.com/share/p/1Bn86KFzSx/)
 
-...Hướng dẫn...
+---
+
+### Nguồn tham khảo
+
+- [Amazon Athena – AWS Documentation](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
+- [AWS Glue – AWS Documentation](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
+- [Data Lakes and Analytics on AWS](https://aws.amazon.com/big-data/datalakes-and-analytics/)

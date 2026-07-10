@@ -5,54 +5,47 @@ weight: 2
 chapter: false
 pre: " <b> 1.12 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện tính năng tương tác cộng đồng cho hệ thống FlashLearn.
+* Xây dựng logic tính điểm và xếp hạng người dùng.
+* Triển khai hệ thống bình luận phân cấp.
+* Lưu vết hoạt động người dùng vào cơ sở dữ liệu.
+* Hoàn tất tài liệu kỹ thuật và bàn giao dự án.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --------- | ------------ | --------------- | ------------------- |
+| 2   | - Họp nhóm thiết kế API tương tác cộng đồng:<br>&nbsp;&nbsp;+ API bình chọn Flashcard (upvote/downvote)<br>&nbsp;&nbsp;+ API xếp hạng Quiz theo thời gian và tỷ lệ đúng | 05/07/2026 | 06/07/2026 | |
+| 3   | - Triển khai logic tính điểm và xếp hạng:<br>&nbsp;&nbsp;+ Cộng điểm: upvote, hoàn thành Quiz, tạo Flashcard được duyệt<br>&nbsp;&nbsp;+ Trừ điểm: downvote, vi phạm nội quy<br>&nbsp;&nbsp;+ Leaderboard phân loại theo tuần/tháng/toàn thời gian | 06/07/2026 | 07/07/2026 | |
+| 4   | - Thiết kế hệ thống bình luận phân cấp:<br>&nbsp;&nbsp;+ Cấu trúc dữ liệu hỗ trợ reply lồng nhau (parent_id)<br>&nbsp;&nbsp;+ Cập nhật tự động bộ đếm comment_count<br>&nbsp;&nbsp;+ Kiểm duyệt nội dung bình luận qua Lambda | 07/07/2026 | 08/07/2026 | |
+| 5   | - Hoàn thiện tính năng bổ sung:<br>&nbsp;&nbsp;+ Tính năng "Yêu thích" (Favorite) Flashcard/Quiz<br>&nbsp;&nbsp;+ Lưu vết hoạt động người dùng vào bảng user_activities<br>&nbsp;&nbsp;+ Dữ liệu hoạt động phục vụ gợi ý học tập thông minh | 08/07/2026 | 09/07/2026 | |
+| 6   | - Họp nhóm hoàn tất tài liệu và bàn giao dự án:<br>&nbsp;&nbsp;+ Tài liệu API với Swagger/OpenAPI spec cho toàn bộ endpoints<br>&nbsp;&nbsp;+ ERD tổng hợp toàn hệ thống (10+ bảng)<br>&nbsp;&nbsp;+ Hồ sơ bàn giao: kiến trúc, hướng dẫn triển khai, tài khoản | 09/07/2026 | 10/07/2026 | |
 
-### Kết quả đạt được tuần 12:
+### Thành tích tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thiện API tương tác cộng đồng cho FlashLearn:
+  * API bình chọn Flashcard: POST /flashcards/{id}/vote (upvote/downvote)
+  * API xếp hạng Quiz: tính điểm theo thời gian hoàn thành và tỷ lệ câu đúng
+  * Leaderboard cập nhật theo thời gian thực qua DynamoDB
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Triển khai thành công logic tính điểm và xếp hạng:
+  * Cộng điểm khi upvote, hoàn thành Quiz, tạo Flashcard được duyệt
+  * Trừ điểm khi nhận downvote hoặc vi phạm nội quy
+  * Bảng xếp hạng (Leaderboard) phân loại theo tuần/tháng/toàn thời gian
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Xây dựng hệ thống bình luận phân cấp hoàn chỉnh:
+  * Cấu trúc dữ liệu hỗ trợ bình luận và reply lồng nhau (parent_id)
+  * Tự động cập nhật bộ đếm comment_count trên mỗi Flashcard/Quiz
+  * Kiểm duyệt nội dung bình luận qua Lambda trước khi hiển thị
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hoàn thiện tính năng Favorite và lưu vết hoạt động người dùng:
+  * Người dùng có thể lưu Flashcard/Quiz yêu thích vào thư mục cá nhân
+  * Bảng `user_activities` ghi lại toàn bộ hành động: xem, học, bình chọn, bình luận
+  * Dữ liệu hoạt động phục vụ tính năng gợi ý học tập thông minh
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn tất tài liệu kỹ thuật và bàn giao dự án thành công:
+  * Tài liệu API đầy đủ với Swagger/OpenAPI spec cho toàn bộ endpoints
+  * ERD tổng hợp toàn hệ thống với đầy đủ 10+ bảng và quan hệ
+  * Hồ sơ bàn giao bao gồm: kiến trúc hệ thống, hướng dẫn triển khai, tài khoản và quyền truy cập

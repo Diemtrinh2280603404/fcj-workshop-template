@@ -5,55 +5,43 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thực hiện rà soát và củng cố toàn bộ kiến thức nền tảng đã học về điện toán đám mây, dịch vụ lưu trữ, mạng và bảo mật trên AWS.
+* Hoàn thiện các bài kiểm tra thực hành toàn diện và thực hiện các bài thi thử để sẵn sàng cho kỳ thi cuối kỳ.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --------- | ------------ | --------------- | ------------------- |
+| 2   | - Ôn tập kiến thức nền tảng điện toán đám mây:<br>&nbsp;&nbsp;+ Mô hình triển khai: Public, Private, Hybrid Cloud<br>&nbsp;&nbsp;+ Mô hình dịch vụ: IaaS, PaaS, SaaS<br>&nbsp;&nbsp;+ Danh mục dịch vụ AWS theo nhóm chức năng<br>- Làm bài kiểm tra thực hành | 31/05/2026 | 01/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 3   | - Củng cố kiến thức về EC2 và lưu trữ:<br>&nbsp;&nbsp;+ Instance types và Compute services<br>&nbsp;&nbsp;+ S3, EBS, EFS, ElastiCache<br>- Hoàn thành bài kiểm tra về Compute & Storage | 01/06/2026 | 02/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 4   | - Ôn tập mạng và cơ sở dữ liệu:<br>&nbsp;&nbsp;+ VPC, Subnet, Route Table, Security Group, NACL<br>&nbsp;&nbsp;+ RDS, Aurora, DynamoDB, ElastiCache<br>- Làm bài kiểm tra thực hành về Networking & Database | 02/06/2026 | 04/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 5   | - Ôn tập công cụ vận hành và bảo mật:<br>&nbsp;&nbsp;+ AWS CLI và Management Console<br>&nbsp;&nbsp;+ IAM: Least privilege, MFA, root protection<br>&nbsp;&nbsp;+ Secrets Manager, GuardDuty, Security Hub<br>- Hoàn thành bài kiểm tra tổng hợp | 04/06/2026 | 05/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
+| 6   | - Tổng kết và ôn luyện cuối kỳ:<br>&nbsp;&nbsp;+ Làm bài thi thử toàn diện<br>&nbsp;&nbsp;+ Xác định điểm yếu và ôn lại tập trung<br>&nbsp;&nbsp;+ Làm quen dạng câu hỏi và phân bổ thời gian | 05/06/2026 | 07/06/2026 | [CloudJourney AWS Study Group](https://cloudjourney.awsstudygroup.com/) |
 
-### Kết quả đạt được tuần 7:
+### Thành tích tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Ôn tập và củng cố vững chắc kiến thức nền tảng về điện toán đám mây:
+  * Ba mô hình triển khai: Public, Private, Hybrid Cloud
+  * Ba tầng dịch vụ: IaaS, PaaS, SaaS
+  * Danh mục toàn bộ dịch vụ AWS theo từng nhóm chức năng
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Củng cố thành thạo kiến thức về EC2 và lưu trữ:
+  * Phân loại Instance types và chọn đúng theo workload
+  * Giải pháp lưu trữ: S3 (object), EBS (block), EFS (file), ElastiCache (in-memory)
+  * Hoàn thành bài kiểm tra thực hành về Compute và Storage đạt kết quả tốt
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững kiến thức về mạng AWS và cơ sở dữ liệu:
+  * VPC, Subnet, Route Table, Security Group, NACL
+  * Các dịch vụ kết nối: PrivateLink, VPN, Direct Connect
+  * Phân biệt RDS, Aurora, DynamoDB, ElastiCache theo nhu cầu sử dụng
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Hoàn thiện kỹ năng vận hành công cụ AWS:
+  * Thành thạo AWS CLI và AWS Management Console
+  * Cấu hình IAM đúng nguyên tắc least privilege
+  * Thiết lập bảo mật tài khoản: MFA, root account protection, Secrets Manager
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành bài thi thử cuối kỳ và sẵn sàng cho kỳ thi:
+  * Xác định các điểm kiến thức còn yếu và ôn lại tập trung
+  * Làm quen với dạng câu hỏi và cách phân bổ thời gian trong kỳ thi
